@@ -5,16 +5,17 @@
   <meta name="Author" content="donglei">
   <meta name="Keywords" content="bookmark">
   <meta name="Description" content="JS Bookmark Management">
-  <title>书签搜索</title>
+  <title>My Bookmarks</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
   <script type="text/javascript" src="js/bookmark.js"></script>
  </head>
  <body>
 
 	<div id="page">
-		<div id="main">
-			<input id="content"  type="text" maxlength="20" />
-			<input id="btn_search" type="button" value="搜索"/>
+		<h1>Bookmark Manage</h1>
+		<div class="search">
+			<input id="keyword" type="text" maxlength="20" placeholder="Key Words..."/>
  		</div>
 		<div id="bookmarks">
 			<ul id="list">
