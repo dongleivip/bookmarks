@@ -39,13 +39,44 @@ body {
   width: 38em;
   border-radius: 2px 0 0 2px;
   background: #ACD0CE;
-  opacity: 0.6;/*²»Í¸Ã÷¼¶±ğ*/
+  opacity: 0.6;/*é€æ˜åº¦*/
 }
 
 .search input[type=text]:focus {
   opacity: 0.9;
   outline:solid 2px #0691CD;
 }
+
+
+#bookmarks{
+	margin:30px 15%;
+	
+}
+
+
+.title{
+	text-align: left;
+	font-size: 22px;
+	width: 74%;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+.createDate{
+	text-align: right;
+	font-size: 19px;
+	font-style: oblique;
+	color: rgb(190,190,190);
+	padding: 0 2%;
+}
+
+.key{
+	background: #FFFF00;
+	color: white;
+}
+
+
 
 
 
