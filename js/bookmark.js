@@ -4,20 +4,6 @@ $(document).ready(function() {
 		filterKeyword($(this).val());
 	});
 	
-//	$("#btn_search").click(function(){
-//		$.ajax({  
-//	        type:"GET",  
-//	        url:"data/bookmarks.json",  
-//	        dataType: "json",  
-//	        success: function(data){  
-//	            $.each(data,function(i,item){  
-//	                var content = "<li>" + item.title + "</li>" + "<li>" + item.created + "</li>";  
-//	                $("#list").append(content);  
-//	            })
-//	        }  
-//		})  
-//	}); 
-	
 });
 
 
@@ -31,13 +17,22 @@ function filterKeyword(key){
         url:"data/bookmarks.json",  
         dataType: "json",  
         success: function(data){
-        	//alert("success");
-        	//return ;
         	
-        	createList(data);
+        	if(key == ""){
+        		createList(data);
+        	} else {
+        		
+        		var result = data.filter(function(item){
+    				return item.title.match(reg);
+    			}).map(function(item){
+    				item.title = item.title.replace(reg,'<span class="key">$&</span>');
+    				return item;
+    			});
+        		createList(result);
+        	}
         },
         error : function(){
-        	alert("请求数据失败");
+        	alert("Request Data Failed...");
         }
 	})
 	
@@ -52,7 +47,7 @@ function createList(data){
 			+  "</div></li>";
 		return str;
 	},"");
-	$("#list").empty();
+	//$("#list").empty();
 	$("#list").html(result);
 }
 
