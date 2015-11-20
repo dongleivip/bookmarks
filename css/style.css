@@ -14,7 +14,8 @@ body {
 	color: #292929;
 	color: rgba(0, 0, 0, 0.82);
 	text-align: center;
-	font: normal 100% Helvetica, Garamond, serif;
+	font : normal 100% Helvetica Neue, Helvetica, Arial, sans-serif;
+	/*font: normal 100% Helvetica, Garamond, serif;*/
 	-moz-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 	-webkit-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -72,7 +73,12 @@ body {
  .key{
 	background: #FFFF00;
 	color: #DE0669;
-} 
+}
+
+.list {
+	padding: 0.5em 0.5em;
+	border-bottom: dashed #FF6600 1px;
+}
 
 
 
