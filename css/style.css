@@ -47,17 +47,15 @@ body {
   outline:solid 2px #0691CD;
 }
 
-
 #bookmarks{
 	margin:30px 15%;
 	
 }
 
-
 .title{
 	text-align: left;
-	font-size: 22px;
-	width: 74%;
+	font-size: 20px;
+	width: 75%;
 	white-space:nowrap;
 	overflow:hidden;
 	text-overflow:ellipsis;
@@ -65,16 +63,16 @@ body {
 
 .createDate{
 	text-align: right;
-	font-size: 19px;
+	font-size: 18px;
 	font-style: oblique;
 	color: rgb(190,190,190);
 	padding: 0 2%;
 }
 
-.key{
+ .key{
 	background: #FFFF00;
-	color: white;
-}
+	color: #DE0669;
+} 
 
 
 
