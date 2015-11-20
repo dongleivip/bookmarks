@@ -43,7 +43,7 @@ function createList(data){
 	
 	var result = data.reduce(function(str,item){
 		str += "<li class=\"list\"><div class=\"title\">" + item.title 
-			+  "</div><div class=\"createDate\">Created@" + item.created 
+			+  "</div><div class=\"createDate\">Created@" + formatDate(item.created) 
 			+  "</div></li>";
 		return str;
 	},"");
@@ -52,5 +52,15 @@ function createList(data){
 }
 
 	
+function formatDate(date) {
+	
+    var time = new Date(parseInt(date) * 1000);
+    var year = time.getFullYear();
+    var month = time.getMonth() + 1;
+    month = month > 10 ? month : '0' + month;
+    var day = time.getDay();
+    day = day > 10 ? day : '0' + day;
+    return year + '-' + month + '-' + day;
+}
 
     
